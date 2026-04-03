@@ -256,6 +256,61 @@
     nav{padding:1rem 1.5rem;}
     .stats-grid{gap:1rem;}
     .section-header{margin-bottom:2.5rem;}
+    /* Skills 2-col inner grid → single column on tablet */
+    #skills [style*="grid-template-columns:1fr 1fr"]{display:grid;grid-template-columns:1fr !important;}
+    .php-code-body{padding:1rem 1.2rem;font-size:.76rem;}
+    .php-str-tag{font-size:.72rem;}
+  }
+  @media(max-width:600px){
+    /* HERO */
+    #hero{padding:5rem 1.2rem 2rem;}
+    .hero-grid{gap:2rem;}
+    h1.hero-name{font-size:clamp(2rem,11vw,3rem);}
+    .hero-title{font-size:.82rem;letter-spacing:1.5px;}
+    .hero-desc{font-size:.88rem;max-width:100%;}
+    .hero-terminal{transform:none !important;}
+    /* Skills */
+    #skills{padding:3rem 1rem;}
+    .skills-container{padding:0;}
+    #skills [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
+    .php-code-body{padding:.9rem 1rem;font-size:.74rem;line-height:1.85;word-break:break-word;}
+    .php-str-tag{font-size:.7rem;padding:.12rem .35rem;margin:2px 1px;}
+    /* Achievement */
+    #achievement{padding:4rem 1rem;}
+    #achievement .award-left-col{padding:2rem 1.2rem !important;}
+    #achievement .award-right-col{padding:2rem 1.2rem !important;}
+    #achievement [style*="font-size:2.4rem"]{font-size:1.8rem !important;}
+    #achievement [style*="font-size:.95rem"]{font-size:.82rem !important;}
+    #achievement [style*="font-size:.85rem"]{font-size:.78rem !important;}
+    #achievement [style*="width:fit-content"] .btn{width:100% !important;text-align:center;justify-content:center;}
+    /* Contact */
+    #contact{padding:3rem 1rem;}
+    #contact [style*="max-width:1000px"]{padding:0 !important;}
+    #contact .contact-terminal a[href]{padding:1.3rem 1.2rem !important;gap:.8rem !important;}
+    #contact .contact-terminal a [style*="font-size:.98rem"],
+    #contact .contact-terminal a [style*="font-size:.88rem"],
+    #contact .contact-terminal a [style*="font-size:.82rem"],
+    #contact .contact-terminal a [style*="font-size:.92rem"]{font-size:.82rem !important;word-break:break-all;}
+    #contact [style*="padding:1.6rem 2rem"]{padding:1.2rem 1rem !important;font-size:.74rem !important;}
+    #contact [style*="padding:1.4rem 2rem"]{padding:1rem !important;flex-direction:column;align-items:flex-start !important;}
+    #contact [style*="padding:1.4rem 2rem"] .btn{width:100% !important;text-align:center;justify-content:center;}
+    /* Experience */
+    .exp-bullets{grid-template-columns:1fr !important;}
+    .exp-card{padding:1.5rem 1.2rem;}
+    .exp-role{font-size:.95rem;}
+    /* Projects */
+    .projects-grid{gap:1rem;}
+    .project-card{height:300px;}
+    /* Stats */
+    .stat-num{font-size:2rem;}
+    /* Section spacing */
+    #about,#chatme,#skills,#experience,#projects,#media,#contact{padding:3rem 1rem;}
+    .section-header{margin-bottom:2rem;}
+    h2.section-title{font-size:clamp(1.5rem,7vw,2.2rem);}
+    /* Chat terminal */
+    .chat-terminal{height:420px;}
+    /* Footer */
+    footer{padding:3rem 1rem 2rem;}
   }
   @media(max-width:700px){
     .media-collage-grid{grid-template-columns:1fr !important;}
@@ -347,7 +402,7 @@
         <div class="php-about-row"><span class="php-about-key">&nbsp;&nbsp;<span style="color:var(--yellow)">'Name'</span> =&gt;</span><span class="php-about-val cyan">'Lokesh S.V'</span><span style="color:var(--muted)">,</span></div>
         <div class="php-about-row"><span class="php-about-key">&nbsp;&nbsp;<span style="color:var(--yellow)">'Role'</span> =&gt;</span><span class="php-about-val cyan">'Full Stack Developer'</span><span style="color:var(--muted)">,</span></div>
         <div class="php-about-row"><span class="php-about-key">&nbsp;&nbsp;<span style="color:var(--yellow)">'City'</span> =&gt;</span><span class="php-about-val orange">'Chennai, India'</span><span style="color:var(--muted)">,</span></div>
-        <div class="php-about-row"><span class="php-about-key">&nbsp;&nbsp;<span style="color:var(--yellow)">'Stack'</span>=&gt;</span><span class="php-about-val" style="color:var(--orange)">[<span style="color:var(--yellow)">'Laravel','React','PHP'</span>]</span><span style="color:var(--muted)">,</span></div>
+        <div class="php-about-row"><span class="php-about-key">&nbsp;&nbsp;<span style="color:var(--yellow)">'Stack'</span>=&gt;</span><span class="php-about-val" style="color:var(--orange)">[<span style="color:var(--yellow)">'Laravel','React','PHP','Java'</span>]</span><span style="color:var(--muted)">,</span></div>
         <div class="php-about-row"><span class="php-about-key">&nbsp;&nbsp;<span style="color:var(--yellow)">'Company'</span>=&gt;</span><span class="php-about-val">'Netaxis IT Solutions'</span><span style="color:var(--muted)">,</span></div>
         <div class="php-about-row"><span class="php-about-key">&nbsp;&nbsp;<span style="color:var(--yellow)">'Cgpa'</span> =&gt;</span><span class="php-about-val" style="color:#f78c6c">8.31</span><span style="color:var(--muted)">,</span></div>
         <div class="php-about-row"><span class="php-about-key">&nbsp;&nbsp;<span style="color:var(--yellow)">'Award'</span>=&gt;</span><span class="php-about-val green">'Rising Excellence Award'</span><span style="color:var(--muted)">,</span></div>
@@ -390,7 +445,7 @@
   <div class="skills-container">
     <div class="php-code-block reveal">
       <div class="php-block-header"><div class="php-block-dots"><div class="php-bdot r"></div><div class="php-bdot y"></div><div class="php-bdot g"></div></div><span class="php-block-filename">backend.php</span></div>
-      <div class="php-code-body"><span class="php-cmt">// Core Stack</span><br><span class="php-kw">$skills</span><span style="color:var(--muted)">['Backend']</span> <span class="php-op">=</span> <span class="php-arr">[</span><br>&nbsp;&nbsp;<span class="php-str-tag green">'PHP 8.x'</span><span class="php-str-tag green">'Laravel 11'</span><span class="php-str-tag green">'MVC Architecture'</span><span class="php-str-tag green">'RESTful APIs'</span><span class="php-str-tag green">'Laravel Sanctum'</span><span class="php-str-tag green">'Eloquent ORM'</span><span class="php-str-tag green">'Queues &amp; Jobs'</span><br><span class="php-arr">];</span></div>
+      <div class="php-code-body"><span class="php-cmt">// Core Stack</span><br><span class="php-kw">$skills</span><span style="color:var(--muted)">['Backend']</span> <span class="php-op">=</span> <span class="php-arr">[</span><br>&nbsp;&nbsp;<span class="php-str-tag green">'PHP 8.x'</span><span class="php-str-tag green">'Laravel 11'</span><span class="php-str-tag green">'MVC Architecture'</span><span class="php-str-tag green">'RESTful APIs'</span><span class="php-str-tag green">'Laravel Sanctum'</span><span class="php-str-tag green">'Eloquent ORM'</span><span class="php-str-tag green">'Queues &amp; Jobs'</span><span class="php-str-tag green">'Java'</span><br><span class="php-arr">];</span></div>
     </div>
     <div class="php-code-block reveal" style="transition-delay:.1s">
       <div class="php-block-header"><div class="php-block-dots"><div class="php-bdot r"></div><div class="php-bdot y"></div><div class="php-bdot g"></div></div><span class="php-block-filename">frontend.php</span></div>
@@ -407,7 +462,7 @@
       </div>
       <div class="php-code-block reveal" style="transition-delay:.4s">
         <div class="php-block-header"><div class="php-block-dots"><div class="php-bdot r"></div><div class="php-bdot y"></div><div class="php-bdot g"></div></div><span class="php-block-filename">devops.php</span></div>
-        <div class="php-code-body"><span class="php-cmt">// Dev toolchain</span><br><span class="php-kw">$skills</span><span style="color:var(--muted)">['DevOps']</span> <span class="php-op">=</span> <span class="php-arr">[</span><br>&nbsp;&nbsp;<span class="php-str-tag">'Git'</span><span class="php-str-tag">'Postman'</span><span class="php-str-tag">'Laragon'</span><span class="php-str-tag">'VS Code'</span><span class="php-str-tag">'Linux'</span><br><span class="php-arr">];</span></div>
+        <div class="php-code-body"><span class="php-cmt">// Dev toolchain</span><br><span class="php-kw">$skills</span><span style="color:var(--muted)">['DevOps']</span> <span class="php-op">=</span> <span class="php-arr">[</span><br>&nbsp;&nbsp;<span class="php-str-tag">'Git'</span><span class="php-str-tag">'Postman'</span><span class="php-str-tag">'Laragon'</span><span class="php-str-tag">'VS Code'</span><span class="php-str-tag">'Linux'</span><span class="php-str-tag">'Eclipse IDE'</span><br><span class="php-arr">];</span></div>
       </div>
       <div class="php-code-block reveal" style="transition-delay:.5s">
         <div class="php-block-header"><div class="php-block-dots"><div class="php-bdot r"></div><div class="php-bdot y"></div><div class="php-bdot g"></div></div><span class="php-block-filename">certified.php</span></div>
